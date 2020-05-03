@@ -1,0 +1,6 @@
+radius:
+  x: 100
+  y: 100
+  z: 100
+global-chat-cooldown: 60
+show-proximity-prefix: false

@@ -1,0 +1,26 @@
+main: me.thelennylord.ProximityChat.Main
+name: ProximityChat
+author: thelennylord
+version: 1.0.0
+api-version: 1.15
+description: Adds Proximity chat to Minecraft
+commands:
+  globalchat:
+    aliases: gc
+    description: Chat globally with other players
+    usage: "Usage: /globalchat <message>"
+    permission: proximitychat.globalchat
+    permission-message: "\u00A7cYou do not have permission to use this command."
+permissions:
+  proximitychat.globalchat:
+    description: Allows user to chat globally
+    default: not op
+  proximitychat.bypassCooldown:
+    description: Bypasses global chat cooldown
+    default: op
+  proximitychat.*:
+    description: Wildcard permission
+    default: op
+    children:
+      proximitychat.globalchat: true
+      proximitychat.bypassCooldown: true
